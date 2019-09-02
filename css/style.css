@@ -2331,6 +2331,103 @@ section.footer .copyright .social a i {
     font-size: 15px;
 }
 
+section.header.second-header .slantbar{
+    left: -17%;
+}
+.second-header .header-bg img{
+    max-height: 350px;
+    object-fit: cover;
+}
+.blogs{
+    background-color: #f0f8ff;
+}
+/*card*/
+.my-card.my-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+.my-shadow {
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.15) !important;
+    -webkit-box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.15);
+}
+.my-card {
+    -o-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition: all ease 0.3s;
+}
+.my-card:hover {
+    -o-transform: scale(1.03, 1.03);
+    -moz-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+}
+.my-card .card-block {
+    max-height: 115px;
+    overflow: hidden;
+}
+.card-title {
+    margin-bottom: 0.75rem;
+}
+.date-list2 li {
+    color: #8E8E8E;
+}
+.my-card-link {
+    background: #50C2F2;
+    color: #fff;
+    outline: none;
+    border-radius: 16px;
+    padding: 5px 25px 7px 25px;
+    transition: all ease-out .3s;
+}
+.my-card-link:hover{
+    color: #fff;
+    background: #449ecd;
+}
+.direction-container ul li span{
+    color: #03a9f4;
+}
+.direction-container ul li span.green-color{
+    color: #49cd8f;
+}
+.direction-container ul{
+    padding-right: 20px !important;
+    position: relative;
+}
+
+.direction-container ul li{
+    position: relative;
+}
+.direction-container ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+.direction-container ul:after{
+    content: '';
+    width: 1px;
+    right: 6px;
+    top: 30%;
+    height: 44%;
+    border-right: 2px dashed #b7b7b7;
+    position: absolute;
+}
+.direction-container ul li::before{
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #49cd8f;
+    position: absolute;
+    right: -20px;
+    top: 6px;
+    border-radius: 50%;
+}
+.direction-container ul li:nth-child(2):before{
+    background-color: transparent;
+    border: 3px solid #03a9f4;
+}
+/*card*/
+
+
 @media only screen and (max-width: 992px) {
     section.footer .contact-widget .images div {
         padding-left: 15px;
