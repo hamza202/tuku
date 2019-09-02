@@ -2428,8 +2428,49 @@ section.header.second-header .slantbar{
     background-color: transparent;
     border: 3px solid #03a9f4;
 }
+.statistics-section-container ul {
+    margin-bottom: 7px;
+}
+.statistics-section-container ul .list-inline-item:not(:last-child) {
+    margin-left: 2px;
+}
+ .statistics-section-container ul li i{
+    color: #55C1EF;
+}
+.statistics-section-container ul li p {
+    color: #8E8E8E;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.statistics-section-container p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.statistics-section-container .col-lg-3:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #03a9f4;
+}
 /*card*/
 
+
+/*----*/
+.statistics-section .statistics-section-container {
+    border-radius: 16px;
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.23);
+    padding: 20px 10px;
+    text-align: center;
+}
+/*----*/
 
 @media only screen and (max-width: 992px) {
     section.footer .contact-widget .images div {
@@ -4173,7 +4214,17 @@ section.header .container .menu-mobile.open ul.menu {
 
 /* Medium Devices, Desktops */
 
-@media only screen and (max-width: 992px) {}
+@media  (max-width: 992px) {
+    .statistics-section-container .col-lg-3:nth-child(2)::after{
+        display: none;
+    }
+    .statistics-section-container .col-lg-3 p {
+        margin-bottom: 12px ;
+    }
+    .statistics-section-container .col-lg-3 li p{
+        margin-bottom: 0;
+    }
+}
 
 
 /* Small Devices, Tablets */
@@ -4193,4 +4244,8 @@ section.header .container .menu-mobile.open ul.menu {
     .whoweare-pic img{
         margin-top: 0;
     }
+}
+@media (max-width: 768px) {
+
+
 }
