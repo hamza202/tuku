@@ -169,7 +169,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-4 text-md-right text-center">
-                                        <a class="d-inline-block btn my-card-link mt-2" href="#">قدم طلب الأن</a>
+                                        <a class="d-inline-block btn my-card-link mt-2 order-button" href="javascript:void(0)">قدم طلب الأن</a>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-4 text-md-right text-center">
-                                        <a class="d-inline-block btn my-card-link mt-2" href="#">قدم طلب الأن</a>
+                                        <a class="d-inline-block btn my-card-link mt-2 order-button" href="javascript:void(0)">قدم طلب الأن</a>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +253,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-4 text-md-right text-center">
-                                        <a class="d-inline-block btn my-card-link mt-2" href="#">قدم طلب الأن</a>
+                                        <a class="d-inline-block btn my-card-link mt-2 order-button" href="javascript:void(0)">قدم طلب الأن</a>
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +295,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-4 text-md-right text-center">
-                                        <a class="d-inline-block btn my-card-link mt-2" href="#">قدم طلب الأن</a>
+                                        <a class="d-inline-block btn my-card-link mt-2 order-button" href="javascript:void(0)">قدم طلب الأن</a>
                                     </div>
                                 </div>
                             </div>
@@ -419,11 +419,26 @@
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="js/jquery.viewportchecker.min.js"></script>
-
+<script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
 
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>
 
+<script>
+    $(".order-button").on("click", function () {
+        Swal({
+            position: 'center',
+            type: 'success',
+            text: 'تم تقديم الطلب بنجاح',
+            showConfirmButton: false,
+            timer: 4000
+        }).then(
+
+            $(this).parent().parent().parent().parent().parent().parent().parent().fadeOut(500),
+
+        )
+    });
+</script>
 </body>
 
 <!-- Mirrored from jaybabani.com/shipping-html/blog-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Aug 2019 08:52:46 GMT -->

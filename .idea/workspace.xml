@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/css/style.css" description=".footer-sidebar-widget" line="4115" />
+    <bookmark url="file://$PROJECT_DIR$/css/style.css" description=".footer-sidebar-widget" line="4118" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17334346-5934-4070-baaf-5a2756857bd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,15 +37,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/orders.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="318" column="51" selection-start-line="318" selection-start-column="51" selection-end-line="318" selection-end-column="51" />
+            <state relative-caret-position="363">
+              <caret line="436" column="82" selection-start-line="436" selection-start-column="82" selection-end-line="436" selection-end-column="82" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#10478#10485#1" expanded="true" />
                 <element signature="e#11068#11075#1" expanded="true" />
                 <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
@@ -76,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="2403" column="30" lean-forward="true" selection-start-line="2403" selection-start-column="30" selection-end-line="2403" selection-end-column="30" />
+            <state relative-caret-position="362">
+              <caret line="2378" column="24" lean-forward="true" selection-start-line="2378" selection-start-column="24" selection-end-line="2378" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -95,7 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>section.header .social-wrap</find>
       <find>slantbar</find>
       <find>section.header .white-wrap</find>
       <find>logo</find>
@@ -125,6 +117,7 @@
       <find>.my-card-link</find>
       <find>flex-grow-1</find>
       <find>يبدأ</find>
+      <find>طلبات</find>
     </findStrings>
     <replaceStrings>
       <replace>Tajawal</replace>
@@ -201,12 +194,12 @@
       <workItem from="1567328571385" duration="10296000" />
       <workItem from="1567348904552" duration="11314000" />
       <workItem from="1567408931222" duration="3839000" />
-      <workItem from="1567415546209" duration="1941000" />
+      <workItem from="1567415546209" duration="2755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28768000" />
+    <option name="totallyTimeSpent" value="29582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -275,13 +268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="2403" column="30" lean-forward="true" selection-start-line="2403" selection-start-column="30" selection-end-line="2403" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -298,17 +284,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="2378" column="24" lean-forward="true" selection-start-line="2378" selection-start-column="24" selection-end-line="2378" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/orders.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="318" column="51" selection-start-line="318" selection-start-column="51" selection-end-line="318" selection-end-column="51" />
+        <state relative-caret-position="363">
+          <caret line="436" column="82" selection-start-line="436" selection-start-column="82" selection-end-line="436" selection-end-column="82" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
             <element signature="e#10478#10485#1" expanded="true" />
             <element signature="e#11068#11075#1" expanded="true" />
             <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />

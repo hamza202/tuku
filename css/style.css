@@ -2380,9 +2380,12 @@ section.header.second-header .slantbar{
     padding: 5px 25px 7px 25px;
     transition: all ease-out .3s;
 }
+.my-card-link:focus{
+    color:#fff;
+}
 .my-card-link:hover{
     color: #fff;
-    background: #449ecd;
+    background: #49cd8f;
 }
 .direction-container ul li span{
     color: #03a9f4;
