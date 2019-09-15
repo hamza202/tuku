@@ -910,7 +910,6 @@ section.estimate {
 }
 
 section .estimate-wrap {
-    margin: -15px;
     padding: 125px 0px 0 0;
     display: inline-block;
 }
@@ -3282,6 +3281,14 @@ section.header .owl-theme .owl-controls .owl-pagination .owl-page:hover {
     section.header .main-wrap .play-area{
         display: none;
     }
+     section.header.second-header .main-wrap h1{
+        display: block;
+         font-size: 20px;
+         line-height: 24px;
+    }
+    section.header.second-header .main-wrap .headul{
+        display: none;
+    }
     section.header .topbar-wrap{
         padding-top: 15px;
     }
@@ -4312,12 +4319,29 @@ section.header .container .menu-mobile.open ul.menu {
 
 /* Small Devices, Tablets */
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    section.testimonials li .testi{
+        font-size: 15px;
+    }
+
+}
 
 
 /* Extra Small Devices, Phones */
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    #testimonial-carousel{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .owl-theme .owl-controls .owl-buttons div.owl-prev{
+        left: -30px;
+    }
+    section.header .slantbar{
+        display: none;
+    }
+
+}
 
 
 /* Custom, iPhone Retina */

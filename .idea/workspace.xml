@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/css/style.css" description=".footer-sidebar-widget" line="4190" />
+    <bookmark url="file://$PROJECT_DIR$/css/style.css" description=".footer-sidebar-widget" line="4195" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17334346-5934-4070-baaf-5a2756857bd4" name="Default Changelist" comment="">
@@ -109,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="3266" column="24" selection-start-line="3266" selection-start-column="24" selection-end-line="3266" selection-end-column="24" />
+            <state relative-caret-position="228">
+              <caret line="3283" column="33" selection-start-line="3283" selection-start-column="33" selection-end-line="3283" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -128,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>menu-ul</find>
       <find>icon icon-logo</find>
       <find>body</find>
       <find>section.header .track-form i</find>
@@ -158,6 +157,7 @@
       <find>login_modal</find>
       <find>#login_modal .modal-footer button</find>
       <find>register-container</find>
+      <find>section.testimonials li .testi</find>
     </findStrings>
     <replaceStrings>
       <replace>Tajawal</replace>
@@ -237,12 +237,12 @@
       <workItem from="1567348904552" duration="11314000" />
       <workItem from="1567408931222" duration="3839000" />
       <workItem from="1567415546209" duration="16110000" />
-      <workItem from="1568550236329" duration="863000" />
+      <workItem from="1568550236329" duration="2509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43800000" />
+    <option name="totallyTimeSpent" value="45446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -364,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="3266" column="24" selection-start-line="3266" selection-start-column="24" selection-end-line="3266" selection-end-column="24" />
+        <state relative-caret-position="228">
+          <caret line="3283" column="33" selection-start-line="3283" selection-start-column="33" selection-end-line="3283" selection-end-column="33" />
         </state>
       </provider>
     </entry>
