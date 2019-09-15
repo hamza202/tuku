@@ -3189,7 +3189,7 @@ section.header .owl-theme .owl-controls .owl-pagination .owl-page:hover {
         top: 35%;
     }
     section.header .white-box {
-        height: 250px;
+        height: 160px;
         width: 300px;
         padding: 15px;
     }
@@ -3220,6 +3220,7 @@ section.header .owl-theme .owl-controls .owl-pagination .owl-page:hover {
     section.header .track-logo {
         height: 70px;
         margin-bottom: 15px;
+        display: none;
     }
     section.header .track-logo i {
         font-size: 70px;
@@ -3241,7 +3242,6 @@ section.header .owl-theme .owl-controls .owl-pagination .owl-page:hover {
     }
     section.header .track-form i {
         top: 15px;
-        right: 15px;
         font-size: 15px;
         line-height: 25px;
     }
@@ -3262,11 +3262,45 @@ section.header .owl-theme .owl-controls .owl-pagination .owl-page:hover {
         line-height: 45px;
         height: 45px;
     }
+    section .heading{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    section.header .white-wrap{
+        background-color: transparent;
+    }
+    section .headul{
+        margin: 0px auto 20px auto;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     section.header .play-area {
         display: none;
+    }
+    section.header .main-wrap h1,
+    section.header .main-wrap .play-area{
+        display: none;
+    }
+    section.header .topbar-wrap{
+        padding-top: 15px;
+    }
+    section.header .white-wrap{
+        height: auto;
+        background-color: transparent;
+        width: auto;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: 60%;
+    }
+    .topbar-wrap .logo img{
+        max-width: 100px;
+        height: auto;
+        margin-right: 15px;
     }
 }
 
