@@ -339,7 +339,7 @@
                                 </button>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary  transition">ارسال طلب</button>
+                        <button type="button" class="btn btn-primary send-request  transition">ارسال طلب</button>
                     </form>
                     <!-- Estimate Form - End -->
                 </div>
@@ -741,18 +741,19 @@
 
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+
 <script>
-    $(document).ready(function () {
-
-        var scrollLink = $('.scroll2');
-
-        // Smooth scrolling
-        scrollLink.click(function (e) {
-            e.preventDefault();
-            $('body,html').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 1000);
-        });
+    $(".send-request").on("click", function () {
+        Swal({
+            position: 'center',
+            type: 'success',
+            text: 'تم تقديم الطلب بنجاح',
+            showConfirmButton: false,
+            timer: 4000
+        }).then(
+        //    do thing
+        )
     });
 </script>
 </body>
