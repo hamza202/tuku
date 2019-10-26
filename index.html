@@ -42,7 +42,7 @@
                         <img src="img/logo.png" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-8 col-sm-7  col-8 menu-area">
+                <div class="col-lg-10 col-md-10 col-sm-10  col-8 menu-area">
 
                     <!-- Menu Top Bar - Start -->
                     <div class="topbar">
@@ -52,7 +52,7 @@
                                 <div class="cssmenu">
 
                                     <!-- Menu - Start -->
-                                    <ul class="menu-ul">
+                                    <ul class="menu-ul clearfix">
                                         <li>
                                             <a href="#">الرئيسية </a>
                                         </li>
@@ -67,7 +67,15 @@
                                         </li>
                                         <li>
                                             <a href="#login_modal" data-toggle="modal" data-target="#login_modal">تسجيل
-                                                الدخول/ تسجيل </a>
+                                                الدخول/ تسجيل
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="menu-ul float-left">
+                                        <li>
+                                            <a class="white-btn" href="#">
+                                                تسجيل سائق جديد
+                                            </a>
                                         </li>
                                     </ul>
                                     <!-- Menu - End -->
@@ -95,7 +103,12 @@
                                 <a href="#contact">تواصل معنا </a>
                             </li>
                             <li>
-                                <a href="#">تسجيل الدخول </a>
+                                <a href="#login_modal" data-toggle="modal" data-target="#login_modal">الدخول/ تسجيل </a>
+                            </li>
+                            <li>
+                                <a class="white-btn" href="#" >
+                                    تسجيل سائق جديد
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -637,8 +650,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12"><input type="email" required placeholder="بريد الكتروني" class="transition mb-3" ></div>
-                        <div class="col-12"><input type="password" required placeholder="كلمة المرور" class="transition mb-0" ></div>
+                        <div class="col-12"><input type="email" required placeholder="بريد الكتروني"
+                                                   class="transition mb-3"></div>
+                        <div class="col-12"><input type="password" required placeholder="كلمة المرور"
+                                                   class="transition mb-0"></div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
@@ -657,6 +672,46 @@
 
     </div>
 </div>
+<div class="modal fade" id="driver_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <form action="#">
+                <div class="modal-header">
+                    <h5 class="modal-title">تسجيل الدخول</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">صورة رخصة القيادة</label>
+                            </div>
+                        </div>
+                        <div class="col-12"><input type="password" required placeholder="كلمة المرور"
+                                                   class="transition mb-0"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="#"> نسيت كلمة المرور؟</a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="#">انشاء حساب جديد</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary w-100">دخول</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
 <!--modal-->
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -752,7 +807,7 @@
             showConfirmButton: false,
             timer: 4000
         }).then(
-        //    do thing
+            //    do thing
         )
     });
 </script>
