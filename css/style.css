@@ -257,7 +257,7 @@ section .subheading {
     text-align: center;
     font-size: 18px;
     line-height: 35px;
-    padding: 0px 50px 100px 50px;
+    padding: 0px 50px 30px 50px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -998,33 +998,39 @@ form textarea {
     width: 100%;
 }
 
- form input {
+form input {
     background-color: #f5f5f5;
     color: #757575;
-     border: 1px solid #cac9c9;
+    border: 1px solid #cac9c9;
     height: 50px;
     padding: 10px 15px;
     margin-bottom: 12px;
     vertical-align: top;
 }
-.form-group{
+
+.form-group {
     position: relative;
 }
-.form-group input.error{
+
+.form-group input.error {
     border: 1px solid red;
 }
-.form-group label.error{
+
+.form-group label.error {
     position: absolute;
     bottom: -18px;
     font-size: 15px;
     color: red;
 }
-.form-group select + label.error{
+
+.form-group select + label.error {
     bottom: -30px;
 }
-.form-group select.error{
+
+.form-group select.error {
     border: 1px solid red;
 }
+
 form textarea {
     background-color: #f5f5f5;
     color: #757575;
@@ -1034,11 +1040,12 @@ form textarea {
     margin-bottom: 40px;
     vertical-align: top;
 }
-.map-cont{
+
+.map-cont {
     position: relative;
 }
 
-.map-cont span{
+.map-cont span {
     position: absolute;
     top: 5px;
     color: #495057;
@@ -1046,37 +1053,46 @@ form textarea {
     z-index: 10;
     font-weight: 600;
 }
+
 form .btn-primary.btn-block {
     height: 50px;
     line-height: 30px;
     font-size: 18px;
 }
+
 p.commands {
     margin-top: 0px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
 }
+
 p.commands button:nth-child(2) {
     order: 0;
 }
-p.commands button.prev{
+
+p.commands button.prev {
     order: 2;
 }
-#map_2 , #map_1{
+
+#map_2, #map_1 {
     height: 250px;
     width: 100%;
 }
-.stepDetails textarea{
+
+.stepDetails textarea {
     margin-bottom: 0 !important;
     resize: none;
 }
-.form-group textarea + label.error{
+
+.form-group textarea + label.error {
     bottom: -31px;
 }
-.form-group textarea.error{
+
+.form-group textarea.error {
     border: 1px solid red;
 }
+
 input:active,
 input:focus,
 textarea:active,
@@ -1133,16 +1149,23 @@ section.testimonials li .testi {
     max-width: 800px;
     margin: 0 auto;
 }
-.h-0{
+
+.h-0 {
     height: 0 !important;
 }
+
 input#lng,
-input#lng2{
-    opacity: 0; height: 0; padding: 0; margin: 0;
+input#lng2 {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
 }
-input.map-lng + label{
+
+input.map-lng + label {
     bottom: -8px !important;
 }
+
 section.testimonials li .testi_by {
     margin: 0 auto;
     display: inline-block;
@@ -2443,7 +2466,6 @@ section.header.second-header .slantbar {
 
 /*card*/
 .my-card.my-card {
-    border-radius: 16px;
     overflow: hidden;
 }
 
@@ -2467,8 +2489,45 @@ section.header.second-header .slantbar {
 }
 
 .my-card .card-block {
-    max-height: 115px;
+    /*max-height: 115px;*/
     overflow: hidden;
+}
+.my-card  .price-card .price-number{
+    font-size: 37px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 25px;
+}
+.my-card  .price-card .price-currency{
+    color: #fff;
+    font-size: 18px;
+    padding-right: 5px;
+}
+.my-card  .price-card{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 70px;
+    background-color: #02A9F4;
+}
+.my-card a{
+    text-decoration: none;
+    color: inherit;
+}
+.request-status {
+    color: white;
+    border-radius: 50px;
+    padding: 7px 20px 9px 20px;
+    text-align: center;
+    background-color: #02A9F4;
+}
+.request-status.green-bg{
+    background-color: #2ED573;
+}
+.font-20 {
+    font-size: 20px;
 }
 
 .card-title {
@@ -2499,30 +2558,37 @@ section.header.second-header .slantbar {
 .direction-container ul li span {
     color: #03a9f4;
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 /*custom file*/
-.custom-file{
+.custom-file {
     height: 50px;
 }
-.custom-file-label{
+
+.custom-file-label {
     background: #F7F7F7;
     border-radius: 0 !important;
     height: 50px;
     line-height: 38px;
     text-transform: none;
 }
-.custom-file-input{
+
+.custom-file-input {
     cursor: pointer;
 }
-.custom-file-label::after{
+
+.custom-file-label::after {
     display: none;
 }
-.custom-file-label:before{
-    font-family: "Font Awesome 5 pro"; content: "\f341";
+
+.custom-file-label:before {
+    font-family: "Font Awesome 5 pro";
+    content: "\f341";
     position: absolute;
     left: 10px;
     font-size: 24px;
@@ -2530,9 +2596,30 @@ input[type=number]::-webkit-outer-spin-button {
     transform: translateY(-50%);
     color: #50C2F2;
 }
+
 /*End custom file*/
 .direction-container ul li span.green-color {
     color: #49cd8f;
+}
+
+.profile-media img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    border: 10px solid rgba(2, 169, 244, 0.08);
+}
+
+.media.profile-media {
+    align-items: center;
+}
+
+.media.profile-media p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.mt--100 {
+    margin-top: -100px;
 }
 
 .direction-container ul {
@@ -2542,6 +2629,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .direction-container ul li {
     position: relative;
+    font-weight: 500;
 }
 
 .direction-container ul li:nth-child(1) {
@@ -4548,11 +4636,13 @@ section.header .container .menu-mobile.open ul.menu {
     padding-right: 14px;
     color: #F5544A;
 }
-.register-container .custom-file-container ul.parsley-errors-list{
+
+.register-container .custom-file-container ul.parsley-errors-list {
     bottom: -19px;
 }
-.parsley-error, .parsley-error:focus ,
-.custom-file-container .parsley-error + .parsley-errors-list + label{
+
+.parsley-error, .parsley-error:focus,
+.custom-file-container .parsley-error + .parsley-errors-list + label {
     color: #F5544A !important;
     border-color: #f5544a !important;
     box-shadow: 0 0 0 0.2rem rgba(245, 84, 74, 0.25) !important;
@@ -4576,6 +4666,18 @@ section.header .container .menu-mobile.open ul.menu {
 
 .cssmenu > ul > li > a.white-btn {
     border-radius: 40px;
+}
+
+.profile-details-container {
+    margin-top: 20px;
+}
+
+.profile-details-container p {
+    font-size: 20px;
+}
+
+.text-color-light {
+    color: #9A9A9A;
 }
 
 /* Custom, iPhone Retina */
@@ -4641,6 +4743,11 @@ section.header .container .menu-mobile.open ul.menu {
         font-size: 15px;
     }
 
+    .profile-media {
+        display: block;
+        text-align: center;
+    }
+
 }
 
 
@@ -4672,7 +4779,12 @@ section.header .container .menu-mobile.open ul.menu {
     .whoweare-pic img {
         margin-top: 0;
     }
-    .form-container-top{
+
+    .form-container-top {
+        margin-top: 0;
+    }
+
+    .mt--100 {
         margin-top: 0;
     }
 }
