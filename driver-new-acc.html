@@ -249,7 +249,7 @@
                                         <input required=""
                                                data-parsley-required-message="يجب الموافقة على الشروط والأحكام"
                                                type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">الموافقة علي <a
+                                        <label class="custom-control-label" for="customCheck1">الموافقة على <a
                                                 href="#">الشروط والاحكام</a></label>
                                     </div>
                                 </div>
@@ -371,7 +371,7 @@
     $('.custom-file-input').bind('change', function () {
         var filename = $(this).val();
         if (/^\s*$/.test(filename)) {
-            $(this).next().next('.custom-file-label').text("No file chosen...");
+            $(this).next().next('.custom-file-label').text("لم يتم اختيار صورة");
             $(this).next('.custom-file-label').text("لم يتم اختيار صورة");
 
         } else {

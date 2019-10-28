@@ -106,7 +106,7 @@
                                 <a href="#login_modal" data-toggle="modal" data-target="#login_modal">الدخول/ تسجيل </a>
                             </li>
                             <li>
-                                <a class="white-btn" href="#" >
+                                <a class="white-btn" href="#">
                                     تسجيل سائق جديد
                                 </a>
                             </li>
@@ -324,37 +324,219 @@
         <div class="container-fluid py-0">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-10 offset-lg-1  ">
-                    <!-- Estimate Form - Start -->
+                    <form id="SignupForm" class="register-container" action="">
 
-                    <form action='#' method='post'>
-                        <div class='row'>
-                            <div class='col-sm-12'>
-                                <label>الإسم:</label>
-                                <input type='text' placeholder='' class='transition'>
+                        <fieldset class="form-outer">
+                            <div class=" mb-3 mt-5">
+                                <h5>بيانات المرسل</h5>
                             </div>
-                            <div class='col-sm-6'><label>رقم الهاتف:</label>
-                                <input type='text' placeholder=''
-                                       class='transition' id='est_qty'></div>
-                            <div class='col-sm-6'><label>عدد الطرود:</label><input type='text' placeholder=''
-                                                                                   class='transition'></div>
 
-                            <div class='col-sm-6'><label>مكان استلام الطلب:</label>
-                                <input type='text' placeholder=''
-                                       class='transition'></div>
-                            <div class='col-sm-6'><label>مكان تسليم الطلب:</label><input type='text' placeholder=''
-                                                                                         class='transition'
-                            ></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <input name="name" placeholder="الاسم بالكامل" type="text"
+                                               required=""/>
+                                    </div>
 
-                            <div class='col-sm-12'><label>استلام وتسليم الطلب على الخريطة:</label>
-                                <button type="button" class="btn btn-brouwn border-r-5 mt-0 w-100 text-left icon-button"
-                                        data-toggle="modal" data-target="#exampleModal">
-                                    <i class="fas fa-map-marker-plus pr-1"></i> حدد البدايه والنهاية
-                                </button>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group ">
+                                        <input name="phone" placeholder="رقم الجوال" type="number"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group form-group mb-4">
+                                        <select name="town" class="custom-select my-focus" required="">
+                                            <option value="" selected="">المحافظة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group form-group mb-4">
+                                        <select name="city" class="custom-select my-focus" required="">
+                                            <option value="" selected="">المدينة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group ">
+                                        <input name="address" placeholder="العنوان" type="text"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="map-cont">
+
+                                        <a href="#exampleModal" class="d-block mb-4" data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <span>
+                                            عنوان تسليم الطلب للمندوب
+                                            </span>
+                                            <img src="img/map2.png" class="img-fluid" alt="">
+                                        </a>
+                                        <div class="form-group p-0 m-0 h-0">
+                                            <input value="" class="map-lng" name="lng" required id="lng" type="text"
+                                            >
+                                            <input value="" hidden name="lat" id="lat" type="text"
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">حدد مكان تسليم واستلام الطلب</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="map_1"></div>
+                                                </div>
+                                                <div class="modal-footer justify-content-lg-start">
+                                                    <button id="save1" type="button" class="btn btn-primary"
+                                                            data-dismiss="modal">حفظ
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <button type="button" class="btn btn-primary send-request  transition">ارسال طلب</button>
+                        </fieldset>
+
+                        <fieldset class="form-outer">
+                            <div class=" mb-3 mt-5">
+                                <h5>بيانات الطلبية</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <input name="pac_type" placeholder="نوع الطرد" type="text"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-4">
+                                        <input name="pac_number" placeholder="عدد الطرود" type="number"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-4">
+                                        <input name="total_weight" placeholder="الوزن الإجمالي" type="text"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-4">
+                                        <textarea rows="4" placeholder="تفاصيل إضافية" name="more_details"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-outer">
+                            <div class=" mb-3 mt-5">
+                                <h5>بيانات المستلم</h5>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <input name="r_name" placeholder="الاسم بالكامل" type="text"
+                                               required=""/>
+                                    </div>
+
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group ">
+                                        <input name="r_phone" placeholder="رقم الجوال" type="number"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group form-group mb-4">
+                                        <select name="r_town" class="custom-select my-focus" required="">
+                                            <option value="" selected="">المحافظة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group form-group mb-4">
+                                        <select name="r_city" class="custom-select my-focus" required="">
+                                            <option value="" selected="">المدينة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group ">
+                                        <input name="r_address" placeholder="العنوان" type="text"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="map-cont">
+
+                                        <a href="#exampleModal2" class="d-block mb-4" data-toggle="modal"
+                                           data-target="#exampleModal2">
+                                            <span>
+                                            عنوان المستلم
+                                            </span>
+                                            <img src="img/map2.png" class="img-fluid" alt="">
+                                        </a>
+                                        <div class="form-group p-0 m-0 h-0">
+                                            <input value="" class="map-lng" name="lng2" required id="lng2" type="text"
+                                            >
+                                            <input value="" hidden name="lat2" id="lat2" type="text"
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">حدد مكان تسليم واستلام الطلب</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="map_2"></div>
+                                                </div>
+                                                <div class="modal-footer justify-content-lg-start">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">حفظ</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <p>
+                            <button id="SaveAccount" class="btn btn-primary">تأكيد</button>
+                        </p>
                     </form>
-                    <!-- Estimate Form - End -->
                 </div>
 
                 <div class="col-lg-7 of pic">
@@ -594,47 +776,6 @@
 </section>
 <!-- Section End - Footer -->
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">حدد مكان تسليم واستلام الطلب</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-inline">
-                    <li class="list-inline-item mr-0">
-                        <ul class="list-inline">
-                            <li class="list-inline-item mr-0">
-                                <img src="img/0.png" alt="">
-                            </li>
-                            <li class="list-inline-item">
-                                مكان الإستلام
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-inline-item ml-4">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <img src="img/1.png" alt="">
-                            </li>
-                            <li class="list-inline-item">
-                                مكان التسليم
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div id="map-canvas"></div>
-            </div>
-            <div class="modal-footer justify-content-lg-start">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">حفظ</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--modal-->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -718,81 +859,14 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="js/jquery.viewportchecker.min.js"></script>
 
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwQWgqTGypi82vAyP97l2O5Zi_RBiVA5E&sensor=false"></script>
-<script type="text/javascript" src="js/gmap.js"></script>
-<script>
-    var map, markers = new Array();
+<!--<script type="text/javascript"-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwQWgqTGypi82vAyP97l2O5Zi_RBiVA5E&sensor=false"></script>-->
 
-    function initialize() {
-
-        var mapOptions = {
-            zoom: 6,
-            draggableCursor: 'crosshair',
-            draggingCursor: 'move',
-            center: new google.maps.LatLng(31.6591234, 34.9806217),
-            mapTypeId: google.maps.MapTypeId.TERRAIN
-        };
-
-        map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-
-
-        google.maps.event.addListener(map, 'click', function (event) {
-            if (markers.length < 2) {
-                addPoint(event.latLng);
-
-            }
-            console.log(markers)
-        });
-    }
-
-    function removePoint(marker) {
-
-        for (var i = 0; i < markers.length; i++) {
-
-            if (markers[i] === marker) {
-
-                markers[i].setMap(null);
-                markers.splice(i, 1);
-
-            }
-        }
-    }
-
-    function addPoint(latlng) {
-        if (markers.length < 2) {
-            var marker = new google.maps.Marker({
-                position: latlng,
-                icon: 'img/' + markers.length + '.png',
-                map: map
-            });
-        }
-        if (markers.length < 2) {
-            markers.push(marker);
-            console.log(markers)
-        }
-
-
-        google.maps.event.addListener(marker, 'click', function (event) {
-
-            removePoint(marker);
-        });
-    }
-
-    initialize();
-</script>
 <!--Owl-->
 <script src="js/owl.carousel.min.js"></script>
 
-
-<!-- Google Map -->
-
-<!--Fancybox -->
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen"/>
-
+<script src="js/jquery.formtowizard.js"></script>
+<script src="js/jquery.validate.js"></script>
 
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>
@@ -811,6 +885,121 @@
         )
     });
 </script>
+<script>
+    $(function () {
+        var $signupForm = $('#SignupForm');
+
+        $signupForm.validate({
+            rules: {
+                gender: {
+                    required: true,
+                },
+                country: {
+                    required: true,
+                },
+                nationality: {
+                    required: true,
+                },
+                re_password: {
+                    equalTo: "#Password"
+                },
+                date: {
+                    dateBR: {dateBR: true}
+                }
+
+            },
+            messages: {
+                country: "الرجاء اختر دولتك",
+                nationality: "الرجاء اختر جنسيتك",
+                lng: "يجب اختيار عنوان على الخريطه",
+                phone: {
+                    maxlength: $.validator.format(" الرقم غير صحيح"),
+                    minlength: $.validator.format("الرقم غير صحيح"),
+                }
+            }
+        });
+
+        $signupForm.formToWizard({
+            submitButton: 'SaveAccount',
+            nextBtnClass: 'btn btn-primary next',
+            nextBtnName: 'التالي',
+            prevBtnName: 'السابق',
+            prevBtnClass: 'btn btn-secondary btn-4 prev',
+            buttonTag: 'button',
+            validateBeforeNext: function (form, step) {
+                var stepIsValid = true;
+                var validator = form.validate();
+                $(':input', step).each(function (index) {
+                    var xy = validator.element(this);
+                    stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                });
+                return stepIsValid;
+            },
+            progress: function (i, count) {
+                $('#progress-complete').width('' + (i / count * 100) + '%');
+            }
+        });
+    });
+</script>
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
+            zoom: 7,
+        };
+        var map = new google.maps.Map(document.getElementById("map_1"), mapProp);
+
+        google.maps.event.addListener(map, 'click', function (event) {
+            var lang = event.latLng.lng();
+            var lat = event.latLng.lat();
+            document.getElementById("lng").value = lang;
+            document.getElementById("lat").value = lat;
+        });
+        var marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
+            icon: 'img/0.png'
+        });
+        google.maps.event.addListener(map, 'click', function (event) {
+            marker.setPosition(event.latLng);
+
+        });
+
+
+        var mapProp2 = {
+            center: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
+            zoom: 7,
+        };
+        var map2 = new google.maps.Map(document.getElementById("map_2"), mapProp2);
+
+        google.maps.event.addListener(map2, 'click', function (event) {
+            var lang2 = event.latLng.lng();
+            var lat2 = event.latLng.lat();
+            document.getElementById("lng2").value = lang2;
+            document.getElementById("lat2").value = lat2;
+        });
+        var marker2 = new google.maps.Marker({
+            map: map2,
+            position: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
+            icon: 'img/1.png'
+        });
+        google.maps.event.addListener(map2, 'click', function (event) {
+            marker2.setPosition(event.latLng);
+
+        });
+
+    }
+
+    $("#save1").on("click", function () {
+        $('#step0Next').click()
+    });
+
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwQWgqTGypi82vAyP97l2O5Zi_RBiVA5E&amp;callback=myMap "></script>
+<script type="text/javascript" src="js/gmap.js"></script>
+
 </body>
 
 </html>

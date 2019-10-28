@@ -919,7 +919,6 @@ section.estimate {
 
 section .estimate-wrap {
     padding: 125px 0px 0 0;
-    display: inline-block;
 }
 
 section .estimate-wrap .pic {
@@ -999,16 +998,33 @@ form textarea {
     width: 100%;
 }
 
-form input {
+ form input {
     background-color: #f5f5f5;
     color: #757575;
-    border: 0px solid rgba(255, 255, 255, 0.5);
+     border: 1px solid #cac9c9;
     height: 50px;
     padding: 10px 15px;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     vertical-align: top;
 }
-
+.form-group{
+    position: relative;
+}
+.form-group input.error{
+    border: 1px solid red;
+}
+.form-group label.error{
+    position: absolute;
+    bottom: -18px;
+    font-size: 15px;
+    color: red;
+}
+.form-group select + label.error{
+    bottom: -30px;
+}
+.form-group select.error{
+    border: 1px solid red;
+}
 form textarea {
     background-color: #f5f5f5;
     color: #757575;
@@ -1018,13 +1034,49 @@ form textarea {
     margin-bottom: 40px;
     vertical-align: top;
 }
+.map-cont{
+    position: relative;
+}
 
+.map-cont span{
+    position: absolute;
+    top: 5px;
+    color: #495057;
+    right: 16px;
+    z-index: 10;
+    font-weight: 600;
+}
 form .btn-primary.btn-block {
     height: 50px;
     line-height: 30px;
     font-size: 18px;
 }
-
+p.commands {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+p.commands button:nth-child(2) {
+    order: 0;
+}
+p.commands button.prev{
+    order: 2;
+}
+#map_2 , #map_1{
+    height: 250px;
+    width: 100%;
+}
+.stepDetails textarea{
+    margin-bottom: 0 !important;
+    resize: none;
+}
+.form-group textarea + label.error{
+    bottom: -31px;
+}
+.form-group textarea.error{
+    border: 1px solid red;
+}
 input:active,
 input:focus,
 textarea:active,
@@ -1081,7 +1133,16 @@ section.testimonials li .testi {
     max-width: 800px;
     margin: 0 auto;
 }
-
+.h-0{
+    height: 0 !important;
+}
+input#lng,
+input#lng2{
+    opacity: 0; height: 0; padding: 0; margin: 0;
+}
+input.map-lng + label{
+    bottom: -8px !important;
+}
 section.testimonials li .testi_by {
     margin: 0 auto;
     display: inline-block;
