@@ -956,18 +956,32 @@
              document.getElementById("lat").value = lat;
 
         });
-        var marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
-            icon: 'img/0.png'
-        });
-        google.maps.event.addListener(map, 'click', function (event) {
-            marker.setPosition(event.latLng);
-            console.log(document.getElementById("lng").value);
-            console.log(document.getElementById("lat").value);
-        });
 
 
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(position.coords.latitude , position.coords.longitude),
+                    icon: 'img/0.png'
+                });
+                google.maps.event.addListener(map, 'click', function (event) {
+                    marker.setPosition(event.latLng);
+                    console.log(document.getElementById("lng").value);
+                    console.log(document.getElementById("lat").value);
+                });
+            });
+        }
+
+
+
+
+        //map2/////
         var mapProp2 = {
             center: new google.maps.LatLng(31.511153667989184, 34.93505459124765),
             zoom: 7,
