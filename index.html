@@ -192,13 +192,13 @@
 </section>
 
 <!-- Section Start - Major Services -->
-<section class="whoweare padding-bottom-50" id="whoweare">
+<section class="whoweare padding-bottom-50" >
     <div class="container">
-        <div class="row">
-            <div class="col-xl-4 col-lg-12 whoweare-pic">
+        <div class="row" id="whoweare">
+            <div class="col-lg-4 col-md-12 order-lg-0 order-1 whoweare-pic">
                 <img src="img/who-we-are.jpg" class="img-fluid" alt="Who We Are">
             </div>
-            <div class="col-xl-8 col-lg-12 col-md-12  whoweare-info">
+            <div class="col-lg-8 col-md-12 order-lg-1  order-0 whoweare-info">
                 <h1 class="heading text-left">من نحن</h1>
                 <div class="headul right-align"></div>
                 <p>
@@ -382,10 +382,8 @@
                                             <img src="img/map2.png" class="img-fluid" alt="">
                                         </a>
                                         <div class="form-group p-0 m-0 h-0">
-                                            <input value="" class="map-lng" name="lng" required id="lng" type="text"
-                                            >
-                                            <input value="" hidden name="lat" id="lat" type="text"
-                                            >
+                                            <input value="" class="map-lng" name="lng" required id="lng" type="text">
+                                            <input value="" hidden name="lat" id="lat" type="text">
                                         </div>
                                     </div>
 
@@ -628,9 +626,9 @@
 <!-- Section End - Testimonials -->
 
 <!-- Section Start - Get In Touch -->
-<section class='contact contact-small' id='contact'>
+<section class='contact contact-small' >
     <div class="container pb-5">
-        <div class="row">
+        <div class="row" id='contact'>
             <div class="col-12">
                 <h1 class="heading">تواصل معنا</h1>
                 <div class="headul pb-3"></div>
@@ -856,6 +854,7 @@
 <!--modal-->
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="js/jquery.viewportchecker.min.js"></script>
 
@@ -953,8 +952,9 @@
         google.maps.event.addListener(map, 'click', function (event) {
             var lang = event.latLng.lng();
             var lat = event.latLng.lat();
-            document.getElementById("lng").value = lang;
-            document.getElementById("lat").value = lat;
+             $("#lng").val(lang) ;
+             document.getElementById("lat").value = lat;
+
         });
         var marker = new google.maps.Marker({
             map: map,
@@ -963,7 +963,8 @@
         });
         google.maps.event.addListener(map, 'click', function (event) {
             marker.setPosition(event.latLng);
-
+            console.log(document.getElementById("lng").value);
+            console.log(document.getElementById("lat").value);
         });
 
 
@@ -1000,6 +1001,26 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwQWgqTGypi82vAyP97l2O5Zi_RBiVA5E&amp;callback=myMap "></script>
 <script type="text/javascript" src="js/gmap.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var scrollLink = $('.scroll2');
+
+        // Smooth scrolling
+        scrollLink.click(function (e) {
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop: $(this.hash).offset().top - 100
+            }, 1000);
+        });
+    });
+</script>
+<script>
+    $( ".menu" ).click(function() {
+        $('.menu-mobile').removeClass('open');
+        $('i.icon-menu').removeClass('mdi-close');
+    });
+</script>
 
 </body>
 
