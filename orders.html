@@ -141,14 +141,25 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="px-3 py-4">
-                                <div class="media profile-media">
-                                    <img class="mr-md-3 mr-0" src="img/avatar-2.jpg" alt="Generic placeholder image">
+                                <div class="row align-items-center">
+                                    <div class="col-md-10 order-md-0 order-2">
+                                        <div class="media profile-media">
+                                            <img class="mr-md-3 mr-0" src="img/avatar-2.jpg"
+                                                 alt="Generic placeholder image">
 
-                                    <div class="media-body">
-                                        <h4 class="mt-0">محمد الشيخ خليل</h4>
-                                        <p>
-                                            رام الله - بلدة الرام مقابل مركز الشرطة
-                                        </p>
+                                            <div class="media-body">
+                                                <h4 class="mt-0">محمد الشيخ خليل</h4>
+                                                <p>
+                                                    رام الله - بلدة الرام مقابل مركز الشرطة
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 order-md-1 order-1 text-center text-md-right">
+                                        <button type="button" class="btn btn-primary mb-3 mb-md-0 modal-btn"
+                                                data-toggle="modal" data-target="#exampleModalCenter">
+                                            <i class="far fa-user-edit"></i>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="profile-details">
@@ -197,7 +208,7 @@
                             <p class="m-0 price-currency">NIS</p>
                         </div>
                         <div class="text-center">
-                        <p class="price-number m-0">70</p>
+                            <p class="price-number m-0">70</p>
                         </div>
                     </div>
                     <div class="row ">
@@ -520,11 +531,117 @@
 </section>
 <!-- Section End - Footer -->
 
+<!--Start profile Modal-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content register-container">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">تعديل البيانات الشخصية</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <ul class="nav nav-pills mb-3 row" id="pills-tab" role="tablist">
+                <li class="nav-item col-6 pll-0">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                       aria-controls="pills-home" aria-selected="true">البيانات الأساسية</a>
+                </li>
+                <li class="nav-item col-6 prr-0">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                       aria-controls="pills-profile" aria-selected="false">تغير كلمة المرور</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <form action="#" data-parsley-validate="" data-parsley-trigger="keyup , change"
+                          novalidate="">
+                        <div class="modal-body">
+                            <div class="  mb-4 pb-2 input-group">
+                                <input type="text" class="form-control my-focus" placeholder="الاسم بالكامل"
+                                       required=""
+                                       data-parsley-required-message="أدخل اسمك الكامل ">
+                            </div>
+                            <div class="input-group mb-4 pb-2">
+                                <input type="email" class="form-control my-focus" placeholder="البريد الإلكتروني"
+                                       required=""
+                                       data-parsley-required-message="أدخل البريد الإلكتروني">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="input-group form-group mb-2 pb-2">
+                                        <select name="town" class="custom-select my-focus" required=""
+                                         data-parsley-required-message="اختر المحافظة "
+                                        >
+                                            <option value="" selected="">المحافظة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group form-group mb-2 pb-2">
+                                        <select name="city" class="custom-select my-focus" required=""
+                                                data-parsley-required-message="اختر المدينة "
+                                        >
+                                            <option value="" selected="">المدينة</option>
+                                            <option value="1">السعودية</option>
+                                            <option value="2">فلسطين</option>
+                                            <option value="3">مصر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+                            <button type="submit" class="btn btn-primary">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <form action="#" data-parsley-validate="" data-parsley-trigger="keyup , change"
+                          novalidate="">
+                        <div class="modal-body">
+                            <div class="  mb-4 pb-2 input-group">
+                                <input type="password" class="form-control my-focus" placeholder="كلمة المرور الحالية"
+                                       required=""
+                                       data-parsley-required-message="أدخل كلمة المرور الحالية ">
+                            </div>
+                            <div class="  mb-4 pb-2 input-group">
+                                <input type="password" class="form-control my-focus" placeholder="كلمة المرور الجديدة"
+                                       required=""
+                                       id="pw"
+                                       data-parsley-required-message="أدخل كلمة المرور الجديدة ">
+                            </div>
+                            <div class="  mb-4 pb-2 input-group">
+                                <input type="password" class="form-control my-focus" placeholder="تأكيد كلمة المرور"
+                                       required=""
+                                       data-parsley-equalto="#pw"
+                                       data-parsley-equalto-message=" كلمة المرور لا تتطابق"
+                                       data-parsley-required-message="اعد كتابة كلمة المرور">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+                            <button type="submit" class="btn btn-primary">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End profile Modal-->
 
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="js/jquery.viewportchecker.min.js"></script>
 <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+<script src="js/parsley.min.js"></script>
 
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>

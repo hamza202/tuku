@@ -828,10 +828,10 @@
                         <div class="col-12">
 
                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">00970</span>
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">0</span>
                                 </div>
-                                <input type="text" class="form-control" required placeholder="رقم الهاتف" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
@@ -894,12 +894,9 @@
 <script>
     $(".forgetPass").on("click",function () {
         $('#login_modal').modal('hide');
+        $('#forget_password_modal').modal('show')
     });
 
-    $('#login_modal').on('hidden.bs.modal', function () {
-        // Load up a new modal...
-        $('#forget_password_modal').modal('show')
-    })
 </script>
 
 <script src="js/jquery.viewportchecker.min.js"></script>

@@ -4646,7 +4646,7 @@ section.header .container .menu-mobile.open ul.menu {
     width: 100%;
     list-style: none;
     padding: 0px;
-    padding-right: 14px;
+    padding-right: 0;
     color: #F5544A;
 }
 
@@ -4692,7 +4692,23 @@ section.header .container .menu-mobile.open ul.menu {
 .text-color-light {
     color: #9A9A9A;
 }
-
+.modal-btn{
+    min-width: auto;
+    padding-right: 8px;
+    border-radius: 5px;
+}
+.pll-0{
+    padding-left: 0;
+}
+.prr-0{
+    padding-right: 0;
+}
+.nav-pills.row{
+    text-align: center;
+}
+.nav-pills.row .nav-link{
+    border-radius: 0;
+}
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
