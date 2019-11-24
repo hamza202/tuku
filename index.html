@@ -192,7 +192,7 @@
 </section>
 
 <!-- Section Start - Major Services -->
-<section class="whoweare padding-bottom-50" >
+<section class="whoweare padding-bottom-50">
     <div class="container">
         <div class="row" id="whoweare">
             <div class="col-lg-4 col-md-12 order-lg-0 order-1 whoweare-pic">
@@ -318,6 +318,9 @@
                         حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
                         التطبيق.
                     </p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmation">
+                        Launch demo modal
+                    </button>
                 </div>
             </div>
         </div>
@@ -514,7 +517,8 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">حدد مكان تسليم واستلام الطلب</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
@@ -522,7 +526,9 @@
                                                     <div id="map_2"></div>
                                                 </div>
                                                 <div class="modal-footer justify-content-lg-start">
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">حفظ</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                        حفظ
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -626,7 +632,7 @@
 <!-- Section End - Testimonials -->
 
 <!-- Section Start - Get In Touch -->
-<section class='contact contact-small' >
+<section class='contact contact-small'>
     <div class="container pb-5">
         <div class="row" id='contact'>
             <div class="col-12">
@@ -799,7 +805,7 @@
                             <a href="javascript:void(0)" class="forgetPass"> نسيت كلمة المرور؟</a>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#"  >انشاء حساب جديد</a>
+                            <a href="#">انشاء حساب جديد</a>
                         </div>
                     </div>
                 </div>
@@ -828,7 +834,8 @@
                         <div class="col-12">
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="Recipient's username"
+                                       aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">0</span>
                                 </div>
@@ -886,13 +893,177 @@
     </div>
 </div>
 
+<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <div class="price-box text-center">
+                                    <h4 class="text-danger mb-1">
+                                       السعر
+                                    </h4>
+                                    <h4 class="mb-0">
+                                        15
+                                        <span>
+                                            ₪
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center">
+                            <h5>
+                                بيانات المرسل
+                            </h5>
+                        </div>
+                        <ul class="list-unstyled sender-list ">
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>الإسم:</p>
+                                </div>
+                                <div>
+                                    <p>حمزة خميس ابو عيطة</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>رقم جوال:</p>
+                                </div>
+                                <div>
+                                    <p>0595779004</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>المحافظة:</p>
+                                </div>
+                                <div>
+                                    <p>المحافظة</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>المدينة:</p>
+                                </div>
+                                <div>
+                                    <p>المدينة</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center mt-lg-0 mt-3">
+                            <h5>
+                                بيانات المستلم
+                            </h5>
+                        </div>
+                        <ul class="list-unstyled sender-list blue-border">
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>الإسم:</p>
+                                </div>
+                                <div>
+                                    <p>حمزة خميس ابو عيطة</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>رقم جوال:</p>
+                                </div>
+                                <div>
+                                    <p>0595779004</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>المحافظة:</p>
+                                </div>
+                                <div>
+                                    <p>المحافظة</p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>المدينة:</p>
+                                </div>
+                                <div>
+                                    <p>المدينة</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <div class="text-center mt-lg-0 mt-3">
+                            <h5>
+                                بيانات الطلبية
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled sender-list blue-border bl-green">
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>نوع الطرد:</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        نوع الطرد
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled sender-list blue-border bl-green">
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>عدد الطرود:</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        5
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled sender-list blue-border bl-green">
+                            <li class="d-flex justify-content-between">
+                                <div>
+                                    <p>الوزن الأجمالي:</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        15Kg
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
+                <button type="button" class="btn btn-primary">تأكيد</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--modal-->
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script>
-    $(".forgetPass").on("click",function () {
+    $(".forgetPass").on("click", function () {
         $('#login_modal').modal('hide');
         $('#forget_password_modal').modal('show')
     });
@@ -954,7 +1125,7 @@
                 country: "الرجاء اختر دولتك",
                 nationality: "الرجاء اختر جنسيتك",
                 lng: "يجب اختيار عنوان على الخريطه",
-                lng2:"يجب اختيار عنوان على الخريطه",
+                lng2: "يجب اختيار عنوان على الخريطه",
                 phone: {
                     maxlength: $.validator.format(" الرقم غير صحيح"),
                     minlength: $.validator.format("الرقم غير صحيح"),
@@ -995,8 +1166,8 @@
         google.maps.event.addListener(map, 'click', function (event) {
             var lang = event.latLng.lng();
             var lat = event.latLng.lat();
-             $("#lng").val(lang) ;
-             document.getElementById("lat").value = lat;
+            $("#lng").val(lang);
+            document.getElementById("lat").value = lat;
 
         });
 
@@ -1010,7 +1181,7 @@
                 };
                 var marker = new google.maps.Marker({
                     map: map,
-                    position: new google.maps.LatLng(position.coords.latitude , position.coords.longitude),
+                    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                     icon: 'img/0.png'
                 });
                 google.maps.event.addListener(map, 'click', function (event) {
@@ -1020,8 +1191,6 @@
                 });
             });
         }
-
-
 
 
         //map2/////
@@ -1054,7 +1223,6 @@
     });
 
 
-
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwQWgqTGypi82vAyP97l2O5Zi_RBiVA5E&amp;callback=myMap "></script>
 <script type="text/javascript" src="js/gmap.js"></script>
@@ -1073,7 +1241,7 @@
     });
 </script>
 <script>
-    $( ".menu" ).click(function() {
+    $(".menu").click(function () {
         $('.menu-mobile').removeClass('open');
         $('i.icon-menu').removeClass('mdi-close');
     });
