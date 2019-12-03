@@ -1084,19 +1084,38 @@
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
-
 <script>
-    $(".send-request").on("click", function () {
-        Swal({
-            position: 'center',
-            type: 'success',
-            text: 'تم تقديم الطلب بنجاح',
-            showConfirmButton: false,
-            timer: 4000
-        }).then(
-            //    do thing
-        )
-    });
+    // $(document).ready(function () {
+    //     $('#SignupForm').on('submit', function(e) {
+    //     e.preventDefault();
+    //
+    //         $.ajax({
+    //             url : $(this).attr('action') || window.location.pathname,
+    //             type: "GET",
+    //             data: $(this).serialize(),
+    //             success: function (data) {
+    //                 $("#form_output").html(data);
+    //             },
+    //             error: function (jXHR, textStatus, errorThrown) {
+    //                 alert(errorThrown);
+    //             }
+    //         });
+    //     });
+    // });
+
+</script>
+<script>
+    // $(".send-request").on("click", function () {
+    //     Swal({
+    //         position: 'center',
+    //         type: 'success',
+    //         text: 'تم تقديم الطلب بنجاح',
+    //         showConfirmButton: false,
+    //         timer: 4000
+    //     }).then(
+    //         //    do thing
+    //     )
+    // });
 </script>
 <script>
     $(function () {
@@ -1121,6 +1140,9 @@
                 }
 
             },
+            // success: function() {
+            //     $('#confirmation').modal('show');
+            // },
             messages: {
                 country: "الرجاء اختر دولتك",
                 nationality: "الرجاء اختر جنسيتك",
@@ -1132,7 +1154,15 @@
                 }
             }
         });
-
+        jQuery.validator.setDefaults({
+            success:  "valid"
+        });
+        $("#SaveAccount").click(function(e) {
+            e.preventDefault();
+            if($('#SignupForm').valid() === true ) { // here you check if validation returned true or false
+                $('#confirmation').modal('show');
+            }
+        });
         $signupForm.formToWizard({
             submitButton: 'SaveAccount',
             nextBtnClass: 'btn btn-primary next',
