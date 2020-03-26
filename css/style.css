@@ -1,54 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700&display=swap');
 
-/*-----------------------------------------
-color   #03a9f4
-Table of Contents:
-
-    Basic Page Layout
-    Generic CSS Classes
-    General Sections Style
-    Typography
-    Buttons
-    Major Services
-    WorldWide Centres (Map)
-    Company Updates (News Small blocks)
-    Track Your Order
-    Work Process
-    Service Estimate
-    Contact
-    Form Fields
-    Testimonials
-    Tracking APP (Mobile)
-    Clients
-    Features (Large Icons)
-    Who We Are
-    Blogs
-    Pagination
-    InViewPort
-    Meet The Team
-    Our Mission
-    Footer
-    Logo
-    Gallery
-    Isotope Gallery - Masonary Style
-    Header
-    Header Top Bar Menu
-    Header Mobile Menu
-    Header Menu Large Screens
-    Bootstrap Well
-    Sidebar widgets
-    Grid Columns
-    Animation Effects
-    Full Icon Set (Material Icons, Shipping & Font Awesome)
-    Settings Panel
-    Bootstrap 3 Media Queries 
-
-------------------------------------------*/
-
-
-/*----------------------------------------
-  Basic Page Layout
-------------------------------------------*/
 
 html {
     font-size: 100%;
@@ -1035,9 +986,8 @@ form textarea {
     background-color: #f5f5f5;
     color: #757575;
     border: 0px solid rgba(255, 255, 255, 0.5);
-    height: 150px;
+    height: 125px;
     padding: 10px 15px;
-    margin-bottom: 40px;
     vertical-align: top;
 }
 
@@ -4852,4 +4802,58 @@ section.header .container .menu-mobile.open ul.menu {
 @media (max-width: 768px) {
 
 
+}
+@media (min-width: 768px) {
+    section.header .header-bg{
+        overflow: hidden;
+    }
+
+}
+.recipient-data-container{
+    position: relative;
+}
+.recipient-data-container .recipient-data{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.recipient-data-container .recipient-data button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    min-width: 40px;
+    padding: 0;
+}
+.tooltip-inner{
+    background-color: #03a9f4;
+}
+.bs-tooltip-right .tooltip-arrow::before, .bs-tooltip-auto[x-placement^="right"] .tooltip-arrow::before{
+    border-right-color: #03a9f4;
+}
+
+.selectize-input input{
+    height: auto;
+}
+.wlcome-user{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 10px;
+}
+.wlcome-user:hover, .wlcome-user:focus, .wlcome-user:active{
+    color: #03a9f4;
+    text-decoration: none;
+}
+.info-button{
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding:0;
+}
+.popover .popover-arrow::after,.popover .popover-arrow::before{
+    top: 50%;
+    transform: translateY(50%);
 }

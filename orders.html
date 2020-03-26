@@ -558,19 +558,19 @@
                     <form action="#" data-parsley-validate="" data-parsley-trigger="keyup , change"
                           novalidate="">
                         <div class="modal-body">
-                            <div class="  mb-4 pb-2 input-group">
-                                <input type="text" class="form-control my-focus" placeholder="الاسم بالكامل"
+                            <div class="pb-2 input-group">
+                                <input type="text" value="حمزة ابو عيطه" class="form-control my-focus" disabled placeholder="الاسم بالكامل"
                                        required=""
                                        data-parsley-required-message="أدخل اسمك الكامل ">
                             </div>
-                            <div class="input-group mb-4 pb-2">
-                                <input type="email" class="form-control my-focus" placeholder="البريد الإلكتروني"
+                            <div class="input-group pb-2">
+                                <input type="email" value="hamza@hotmail.com" class="form-control my-focus" disabled placeholder="البريد الإلكتروني"
                                        required=""
                                        data-parsley-required-message="أدخل البريد الإلكتروني">
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="input-group form-group mb-2 pb-2">
+                                    <div class="input-group form-group  pb-2">
                                         <select name="town" class="custom-select my-focus" required=""
                                          data-parsley-required-message="اختر المحافظة "
                                         >
@@ -582,7 +582,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="input-group form-group mb-2 pb-2">
+                                    <div class="input-group form-group  pb-2">
                                         <select name="city" class="custom-select my-focus" required=""
                                                 data-parsley-required-message="اختر المدينة "
                                         >
@@ -592,6 +592,28 @@
                                             <option value="3">مصر</option>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="pb-2 form-group input-group">
+                                        <input type="text" class="form-control my-focus" placeholder="العنوان"
+                                               required=""
+                                               data-parsley-required-message="الرجاء ادخال عنوانك ">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="input-group form-group pb-2 custom-file-container">
+                                        <div class="custom-file">
+                                            <input required=""
+                                                   data-parsley-required-message="يجب اختيار صورة شخصية / شعار شركة"
+                                                   type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">الصورة الشخصية / شعار الشركة</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-danger d-block info-button" data-container="body" data-toggle="popover" data-placement="left" data-content="لتغير بيانات أخرى يرجى مراجعة خدمة العملاء">
+                                        <i class="far fa-info-circle"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -638,6 +660,7 @@
 
 <!-- Javascript & CSS Files moved to bottom of page for faster loading -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script src="js/jquery.viewportchecker.min.js"></script>
 <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
@@ -645,7 +668,22 @@
 
 <!-- Main JS -->
 <script type="text/javascript" src="js/main.js"></script>
+<script>
 
+    $('.custom-file-input').bind('change', function () {
+        var filename = $(this).val();
+        if (/^\s*$/.test(filename)) {
+            $(this).next().next('.custom-file-label').text("لم يتم اختيار صورة");
+            $(this).next('.custom-file-label').text("لم يتم اختيار صورة");
+
+        } else {
+            $(this).next().next('.custom-file-label').text(filename.replace("C:\\fakepath\\", ""));
+            $(this).next('.custom-file-label').text(filename.replace("C:\\fakepath\\", ""));
+        }
+    });
+
+    $('[data-toggle="popover"]').popover({})
+</script>
 </body>
 
 </html>
