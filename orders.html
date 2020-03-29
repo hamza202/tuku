@@ -682,7 +682,11 @@
         }
     });
 
-    $('[data-toggle="popover"]').popover({})
+    $('[data-toggle="popover"]').popover({});
+
+    $('.nav-link').on('click',function () {
+        $('[data-toggle="popover"]').popover('hide');
+    })
 </script>
 </body>
 

@@ -4,8 +4,8 @@
     <list default="true" id="17334346-5934-4070-baaf-5a2756857bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver-new-acc.html" beforeDir="false" afterPath="$PROJECT_DIR$/driver-new-acc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/selectize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/selectize.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +94,9 @@
       <workItem from="1575371887683" duration="2829000" />
       <workItem from="1584876298097" duration="1776000" />
       <workItem from="1585148360234" duration="713000" />
-      <workItem from="1585149152557" duration="15223000" />
+      <workItem from="1585149152557" duration="16157000" />
+      <workItem from="1585373179542" duration="2985000" />
+      <workItem from="1585456111432" duration="5668000" />
     </task>
     <servers />
   </component>
