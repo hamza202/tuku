@@ -4932,3 +4932,15 @@ position: relative;
     width: 90px;
     height: auto;
 }
+.invoice-footer-icon li{
+    padding-right: 10px;
+    position: relative;
+}
+.invoice-footer-icon li:before{
+    position: absolute;
+    content: '-';
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
