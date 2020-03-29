@@ -4927,7 +4927,11 @@ position: relative;
     .copy-btn{
         display: none !important;
     }
+    .sender-list li, .price-box{
+        border: 1px solid #aaaaaa !important;
+    }
 }
+
 .invoice-footer-logo{
     width: 90px;
     height: auto;
