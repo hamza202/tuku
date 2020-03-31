@@ -566,6 +566,9 @@
             <div class="col-12">
                 <h1 class="heading">تواصل معنا</h1>
                 <div class="headul pb-3"></div>
+                <button type="button" class="btn btn-primary send-request-2">
+                    sweet alert
+                </button>
             </div>
         </div>
         <div class="row">
@@ -1096,6 +1099,17 @@
             position: 'center',
             type: 'success',
             text: 'تم تقديم الطلب بنجاح',
+            showConfirmButton: false,
+        }).then(
+            //    do thing
+        )
+    });
+    $(".send-request-2").on("click", function () {
+        Swal({
+            html:'<p>تم ارسال الرسالة بنجاح</p>' +
+                '<p class="message-code"> كود الرسالة : <span>123456</span><p/>',
+            position: 'center',
+            type: 'success',
             showConfirmButton: false,
         }).then(
             //    do thing
