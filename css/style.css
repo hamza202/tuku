@@ -5005,10 +5005,17 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child, 
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before{
     left: auto;
     right: 4px;
+    top: 6px;
 }
 div.dataTables_wrapper div.dataTables_filter{
     text-align: left;
 }
+@media (max-width: 992px) {
+    div.dataTables_wrapper div.dataTables_filter{
+        text-align: center;
+    }
+}
+
 .edit-delete-btn button{
     width: 35px;
     height: 35px;
@@ -5020,4 +5027,7 @@ div.dataTables_wrapper div.dataTables_filter{
 }
 table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{
     bottom: 0.2em;
+}
+.data-table th{
+    white-space: nowrap;
 }
