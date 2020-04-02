@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>توكو - حساب جديد</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <link href="css/pace-loading-bar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.shipping.css">
+
+    <link rel="stylesheet" type="text/css" href="css/ShippingIcon.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
+
+    <link rel="stylesheet" type="text/css" href="css/datatables.css">
+    <!--Owl-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
+
+
+</head>
+<body class="blue page-loading" dir="rtl">
+
+
+<!-- Section Start - Header -->
+<section class='header second-header' id='header'>
+    <!-- Header Top Bar - Start -->
+    <div class="topbar-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-4 logo-area">
+                    <div class="logo">
+                        <img src="img/logo.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-8 col-sm-7  col-8 menu-area">
+
+                    <!-- Menu Top Bar - Start -->
+                    <div class="topbar">
+                        <div class="menu">
+                            <div class="primary inviewport animated delay2 hiddenthis visiblethis full-visible"
+                                 data-effect="">
+                                <div class="cssmenu">
+
+                                    <!-- Menu - Start -->
+                                    <ul class="menu-ul">
+                                        <li>
+                                            <a href="#">الرئيسية </a>
+                                        </li>
+                                        <li>
+                                            <a href="orders.html">طلبات التوصيل </a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html#whoweare" class="scroll2">من نحن </a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html#contact" class="scroll2">تواصل معنا </a>
+                                        </li>
+                                    </ul>
+                                    <!-- Menu - End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu Top Bar - End -->
+
+
+                    <!-- Mobile Menu - Start -->
+                    <div class="menu-mobile col-xs-10 pull-right cssmenu">
+                        <i class="icon icon-menu menu-toggle"></i>
+                        <ul class="menu" id="parallax-mobile-menu">
+                            <li>
+                                <a href="#">الرئيسية </a>
+                            </li>
+                            <li>
+                                <a href="orders.html">طلبات التوصيل </a>
+                            </li>
+                            <li>
+                                <a href="#whoweare" class="scroll2">من نحن </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="scroll2">تواصل معنا </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Menu - End -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Top Bar - End -->
+
+
+    <div class="header-bg header-small">
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 slantbar hidden-xs"></div>
+
+
+        <!-- Header Content Slide - Start -->
+        <div style="position:relative;display:inline-block;width:100%;height:auto;">
+            <img src="img/banner-3s.jpg" alt="Header Image" class="img-responsive">
+            <div class="bg-overlay"></div>
+
+
+            <div class="main-wrap">
+                <div class="container">
+                    <div class="col-lg-12 main-content">
+                        <h1>المستلمين</h1>
+                        <div class="headul"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Content Slide - End -->
+
+
+    </div>
+
+
+</section>
+<!-- Section End - Header -->
+
+<!-- Section Start - Blogs -->
+<section class=' pb-5 pt-5' id='blogs'>
+    <div class="container py-4">
+        <div class="row justify-content-between mb-2 align-items-center">
+            <div class="col-auto">
+                <h4 class="m-0">
+                    جدول المستلمين
+                </h4>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_new">
+                    مستلم جديد
+                </button>
+            </div>
+        </div>
+        <div class="border-top pb-3"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class=" py-5 px-4 shadow">
+                    <table id="my_table" class="display data-table" style="width:100%">
+                        <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>رقم الجوال</th>
+                            <th>المحافظة</th>
+                            <th>المدينة / القرية</th>
+                            <th>العنوان التفصيل</th>
+                            <th>عمليات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>حمزة حمزة</td>
+                            <td>0508665487</td>
+                            <td>رام الله</td>
+                            <td> رام الله</td>
+                            <td>جوار مسجد عمر</td>
+                            <td>
+                                <div class="edit-delete-btn">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#add_new">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-target="#delete_modal"
+                                            data-toggle="modal">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>حمزة حمزة</td>
+                            <td>0508665487</td>
+                            <td>رام الله</td>
+                            <td> رام الله</td>
+                            <td>جوار مسجد عمر</td>
+                            <td>
+                                <div class="edit-delete-btn">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#add_new">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-target="#delete_modal"
+                                            data-toggle="modal">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section End - Blogs -->
+
+<!-- Section Start - Footer -->
+<section class='footer bg-black parallax ' id='footer'>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <!-- Text Widget - Start -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1"
+                 data-effect="fadeInUp">
+                <div class="logo mb-4">
+                    <img src="img/logo-blue.png" class="img-fluid" alt="">
+                </div>
+                <p class="pt-3">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                    العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                    يولدها التطبيق.</p>
+            </div>
+            <!-- Text Widget - End -->
+
+            <!-- News Widget - Start -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 news-widget inviewport animated delay2"
+                 data-effect="fadeInUp">
+                <h4>روابط</h4>
+                <div class="headul left-align"></div>
+
+                <div class="footer-sidebar-widget">
+                    <ul class="pr-0">
+                        <li><i class="icon icon-arrow-right"></i><a href="#">طلبات التوصيل</a></li>
+                        <li><i class="icon icon-arrow-right"></i><a href="#">من نحن</a></li>
+                        <li><i class="icon icon-arrow-right"></i><a href="#">تواصل معنا</a></li>
+                        <li><i class="icon icon-arrow-right"></i><a href="#">تسجيل</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <!-- News Widget - End -->
+
+            <!-- Contact Widget - Start -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 contact-widget inviewport animated delay3"
+                 data-effect="fadeInUp">
+                <h4>تواصل معنا</h4>
+                <div class="headul left-align"></div>
+                <p>
+                    فلسطين - الضفة الغربية
+                    <br>
+                    شارع شارع
+                    <br>
+                    بجووار جامع الجامع
+                </p>
+                <p> بريد الكتروني: example@example.com <br> هاتف: 00960512334567</p>
+            </div>
+            <!-- Contact Widget - End -->
+        </div>
+    </div>
+
+    <!-- Copyright Bar - Start -->
+    <div class="copyright">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 message inviewport animated delay1"
+                         data-effect="fadeInUp">
+                        <span class="">&copy; 2019 TUKU | تم انشائة بواسطة <a
+                                href="#">UGB</a> | جميع الحقوق محفوظة</span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 social">
+                        <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i
+                                class="icon icon-facebook text-on-primary"></i></a>
+                        <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i
+                                class="icon icon-twitter text-on-primary"></i></a>
+                        <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i
+                                class="icon icon-dribbble text-on-primary"></i></a>
+                        <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i
+                                class="icon icon-google-plus text-on-primary"></i></a>
+                        <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i
+                                class="icon icon-youtube-play text-on-primary"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Bar - End -->
+
+
+</section>
+<!-- Section End - Footer -->
+
+<div class="modal fade" id="add_new" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+            <form action="#" data-parsley-validate="" data-parsley-trigger="keyup , change"
+                  novalidate="">
+                <div class="modal-header">
+                    <h5 class="modal-title">اضافة مستلم جديد</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row register-container ">
+                        <div class="col-lg-6 col-12">
+                            <div class="input-group mb-3">
+                                <label class="d-block w-100 fw-500 mb-1">الإسم:</label>
+                                <input type="text" required placeholder="الإسم"
+                                       data-parsley-required-message="الرجاء ادخال اسم المستلم"
+                                       class="transition mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="input-group mb-3">
+                                <label class="d-block w-100 fw-500 mb-1">رقم الجوال:</label>
+                                <input type="number" required placeholder="رقم الجوال"
+                                       data-parsley-required-message="الرجاء ادخال رقم الجوال"
+                                       class="transition mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="input-group mb-3 pb-3">
+                                <label class="d-block w-100 fw-500 mb-1">المحافظة:</label>
+                                <select class="custom-select my-focus" required=""
+                                        data-parsley-required-message="اختر المحافظة ">
+                                    <option value="" selected="">المحافظة</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="input-group mb-3 pb-3">
+                                <label class="d-block w-100 fw-500 mb-1">المدينة / القرية:</label>
+                                <select class="custom-select my-focus" required=""
+                                        data-parsley-required-message="اختر المدينة / القرية
+ ">
+                                    <option value="" selected="">المدينة / القرية</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <label class="d-block w-100 fw-500 mb-1">العنوان بالتفصيل:</label>
+                                <input type="text" required placeholder="العنوان بالتفصيل"
+                                       data-parsley-required-message="الرجاء ادخال العنوان بالتفصيل"
+                                       class="transition mb-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary w-100">اضافة</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="#">
+                <div class="modal-header">
+                    <h5 class="modal-title">حذف مستلم</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        هل انت متأكد من حذف المستخدم<b> حمزة ابو عيطة؟</b>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger w-100">حذف</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!-- Javascript & CSS Files moved to bottom of page for faster loading -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="js/jquery.viewportchecker.min.js"></script>
+<script src="js/parsley.min.js"></script>
+<script src="js/datatables.min.js"></script>
+<script>
+    // $('#register-form').parsley().validate()
+</script>
+<!-- Main JS -->
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#my_table').DataTable({
+            responsive: true,
+            rtl: true,
+            "language": {
+                "emptyTable": "لا يوجد بيانات في الجدول",
+                "lengthMenu": "عرض _MENU_ صفوف",
+                "search": "بحث: ",
+                "infoEmpty": "يتم اظهار 0 الى 0 من اصل 0 صف",
+                "info": "يتم اظهار _START_ الى _END_ من اصل _TOTAL_ صفوف",
+                "paginate": {
+                    "previous": "السابق",
+                    "next": "التالي"
+                }
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
