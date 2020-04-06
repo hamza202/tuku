@@ -4976,6 +4976,7 @@ position: relative;
     font-size: 20px;
     font-weight: 600;
     color: #1da7ee;
+    transition: all ease-in-out 0.3s;
 }
 .statistics-section-container.statistics-big ul li p{
     font-size: 17px;
@@ -4985,6 +4986,7 @@ position: relative;
 .statistics-section-container.statistics-big ul li i{
     color: #2ED573;
     font-size: 20px;
+    transition: all ease-in-out 0.3s;
 }
 .statistics-section-container.statistics-big ul{
     margin-bottom: 0;
@@ -5030,4 +5032,17 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
 }
 .data-table th{
     white-space: nowrap;
+}
+.statistics-section-container a{
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+.statistics-section-container a:hover ul li i{
+    color: #1da7ee !important;
+}
+.statistics-section-container a:hover p{
+    color: #2ED573 !important;
+}
+.statistics-section-container a:hover ul li p{
+    color: #212529 !important;
 }
