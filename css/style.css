@@ -5046,3 +5046,6 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
 .statistics-section-container a:hover ul li p{
     color: #212529 !important;
 }
+.footer-sidebar-widget ul li a:focus{
+    color: white;
+}
