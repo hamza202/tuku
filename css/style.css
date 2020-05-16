@@ -5049,3 +5049,11 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
 .footer-sidebar-widget ul li a:focus{
     color: white;
 }
+.showing-xs{
+    display: none;
+}
+@media (max-width: 480px) {
+    .showing-xs{
+        display: block;
+    }
+}
