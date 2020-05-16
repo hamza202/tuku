@@ -1050,7 +1050,7 @@ input:focus,
 textarea:active,
 textarea:focus {
     outline: none;
-    border: 0px solid #03a9f4;
+    border: 1px solid #03a9f4;
     background-color: #eeeeee;
 }
 
@@ -5061,4 +5061,15 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
     text-align: center;}
 div.dataTables_wrapper div.dataTables_paginate ul.pagination{
     justify-content: center;
+}
+table.dataTable.recipient-table thead > tr > th.sorting,
+table.dataTable.recipient-table thead > tr > th.sorting_asc{
+    background: #03a9f4;
+    color: #fff;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    text-align: right;
+}
+table.dataTable.recipient-table tbody tr:nth-child(odd) td{
+    background: #efefef;
 }
