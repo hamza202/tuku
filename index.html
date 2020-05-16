@@ -16,8 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/ShippingIcon.css">
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
-    <link rel="stylesheet" type="text/css" href="css/selectize.default.css">
-
+    <link rel="stylesheet" type="text/css" href="css/datatables.css">
 
     <!--Owl-->
     <link href="css/owl.carousel.css" rel="stylesheet">
@@ -1006,38 +1005,51 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-change">
-                        <div class="custom-control custom-radio d-inline-block">
-                            <input value="1" checked type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">حسب الرقم</label>
-                        </div>
-                        <div class="custom-control custom-radio d-inline-block">
-                            <input value="2" type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">حسب الإسم</label>
-                        </div>
-                    </div>
-                    <div class="user-search-container mt-3">
-                        <div class="control-group number-search-search " dir="rtl">
-                            <label>بحث حسب الرقم</label>
-                            <select id="select-beast2" class="demo-default" placeholder="ابحث عن مستلم حسب الرقم">
-                                <option value="">ابحث عن مستلم حسب الرقم</option>
-                                <option value="4">123456789</option>
-                                <option value="1">548754687</option>
-                                <option value="3">00970595778890</option>
-                                <option value="5">0065487545</option>
-                            </select>
-                        </div>
-                        <div class="control-group name-search d-none" dir="rtl">
-                            <label>بحث حسب الإسم</label>
-                            <select id="select-beast" class="demo-default" placeholder="ابحث عن مستلم حسب الإسم">
-                                <option value="">"ابحث عن مستلم حسب الإسم</option>
-                                <option value="4">حمزة ابو عيطة</option>
-                                <option value="1">محمد احمد</option>
-                                <option value="3">خالد احمد</option>
-                                <option value="5">رامز الجديلي</option>
-                            </select>
-                        </div>
-                    </div>
+                    <table id="my_table" class="display data-table recipient-table" style="width:100%">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>الإسم</th>
+                            <th>رقم جوال</th>
+                            <th>اختر</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td>حمزة حمزة</td>
+                            <td>05012345487</td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>حمزة حمزة</td>
+                            <td>0598756858</td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio2"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>حمزة حمزة</td>
+                            <td>05689764214</td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio3"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
@@ -1183,24 +1195,46 @@
         $('i.icon-menu').removeClass('mdi-close');
     });
 </script>
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
-    $('#select-beast').selectize({});
-    $('#select-beast2').selectize({});
-</script>
-<script>
-    $('.input-change input').on('change', function () {
-        if (this.value === "1") {
-            $('.number-search-search').removeClass('d-none');
-            $('.name-search').addClass('d-none');
-        }else{
-            $('.number-search-search').addClass('d-none');
-            $('.name-search').removeClass('d-none');
-        }
 
-    })
+<!--<script>-->
+<!--    $(function () {-->
+<!--        $('[data-toggle="tooltip"]').tooltip()-->
+<!--    });-->
+<!--    $('#select-beast').selectize({});-->
+<!--    $('#select-beast2').selectize({});-->
+<!--</script>-->
+<!--<script>-->
+<!--    $('.input-change input').on('change', function () {-->
+<!--        if (this.value === "1") {-->
+<!--            $('.number-search-search').removeClass('d-none');-->
+<!--            $('.name-search').addClass('d-none');-->
+<!--        }else{-->
+<!--            $('.number-search-search').addClass('d-none');-->
+<!--            $('.name-search').removeClass('d-none');-->
+<!--        }-->
+
+<!--    })-->
+<script src="js/datatables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#my_table').DataTable({
+            responsive: true,
+            "dom": '<"top"f>rt<"bottom"p><"clear">',
+            // "info":     false,
+            rtl: true,
+            "language": {
+                "emptyTable": "لا يوجد بيانات في الجدول",
+                "lengthMenu": "عرض _MENU_ صفوف",
+                "search": "بحث: ",
+                "infoEmpty": "يتم اظهار 0 الى 0 من اصل 0 صف",
+                "info": "يتم اظهار _START_ الى _END_ من اصل _TOTAL_ صفوف",
+                "paginate": {
+                    "previous": "السابق",
+                    "next": "التالي"
+                }
+            }
+        });
+    });
 </script>
 </body>
 

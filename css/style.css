@@ -5057,3 +5057,8 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
         display: block;
     }
 }
+.recipient-table div.dataTables_wrapper div.dataTables_filter label{
+    text-align: center;}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination{
+    justify-content: center;
+}
