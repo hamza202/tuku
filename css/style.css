@@ -4896,7 +4896,8 @@ position: relative;
     display: block;
     width: 100%;
     padding: 0 10px;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
 }
 .copy-container a{
     position: absolute;
@@ -4914,43 +4915,16 @@ position: relative;
 .invoice-footer{
     display: none;
 }
-@media print {
-    .myDivToPrint {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 15px;
-        font-size: 14px;
-        line-height: 18px;
-    }
-    .header, .footer {
-        display: none;
-    }
-    .btn{
-        display: none;
-    }
-    .invoice-footer{
-        display: flex;
-    }
-    .copy-btn{
-        display: none !important;
-    }
-    .sender-list li, .price-box{
-        border: 1px solid #aaaaaa !important;
-    }
-}
+
 
 .invoice-footer-logo{
-    width: 90px;
+    width: 120px;
     height: auto;
 }
 .invoice-footer-icon li{
     padding-right: 10px;
     position: relative;
+    font-size: 17px;
 }
 .invoice-footer-icon li:before{
     position: absolute;
@@ -4963,6 +4937,9 @@ position: relative;
 .top-card{
     position: relative;
     overflow: hidden;
+}
+.fs-20{
+    font-size: 20px !important;
 }
 .top-card .print-btn{
     position: absolute;
@@ -5072,4 +5049,64 @@ div.dataTables_wrapper div.dataTables_filter label{
 }
 table.dataTable.recipient-table tbody tr:nth-child(odd) td{
     background: #efefef;
+}
+.title-print{
+    border: 1px solid #03a9f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+.dark-border{
+    border-color: #333 !important;
+}
+.myDivToPrint label{
+    font-size: 18px;
+}
+.myDivToPrint .sender-list li p{
+    font-size: 18px;
+}
+.invoice-footer li{
+    font-size: 18px;
+}
+@media print {
+    .myDivToPrint {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .header, .footer {
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+    .invoice-footer{
+        display: flex;
+    }
+    .copy-btn{
+        display: none !important;
+    }
+    .sender-list li, .price-box{
+        border: 1px solid #aaaaaa !important;
+    }
+    .col-md-4-print{
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-6-print{
+        flex: 0 0 50.0%;
+        max-width: 50.0%;
+    }
+    .text-print-left{
+        text-align: left !important;
+    }
+    .text-print-center{
+        text-align: center !important;
+    }
 }
