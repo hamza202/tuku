@@ -4875,7 +4875,7 @@ ul.sender-list{
     padding-left: 0 !important;
 }
 .qr-code-img{
-    max-width: 150px;
+    max-width: 170px;
     height: auto;
 }
 #copy-container{
@@ -5054,6 +5054,10 @@ table.dataTable.recipient-table tbody tr:nth-child(odd) td{
     border: 1px solid #03a9f4;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+.title-print h3{
+    font-size: 22px;
 }
 .dark-border{
     border-color: #333 !important;

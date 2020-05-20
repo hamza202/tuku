@@ -87,24 +87,26 @@
       <workItem from="1586137173559" duration="1774000" />
       <workItem from="1588070551494" duration="1129000" />
       <workItem from="1589625634719" duration="8810000" />
-      <workItem from="1589722119783" duration="7043000" />
+      <workItem from="1589722119783" duration="7642000" />
+      <workItem from="1589971023945" duration="4592000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1932" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585653402607">
